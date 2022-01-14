@@ -1,0 +1,44 @@
+body {
+	background: aliceblue !important;
+}
+
+.stations-destinations {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 14px;
+}
+
+.stations-destinations .stations-destinations-item .stations-destination-title {
+	font-size: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #f1f1f1;
+	padding-bottom: 10px;
+}
+
+.stations-destinations .stations-destinations-item .stations-destination-link {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.stations-destinations .stations-destinations-item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 160px;
+	background: #fff;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 1px 1px 1px 0 #22222247;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.stations-destinations .stations-destinations-item:hover {
+	box-shadow: 1px 1px 5px 2px #22222247;
+}

@@ -1,0 +1,26 @@
+{
+  "stations": {
+    "name": "stations",
+    "author": "Michael Liebler",
+    "creationDate": "13 January, 2022",
+    "copyright": "(C) 2022, Michael Liebler",
+    "license": "GPL",
+    "email": "michael-liebler@janguo.de",
+    "url": "https://freie-radios.de",
+    "version": "3.0",
+    "description": "Liste der Freien Radios in der BRD",
+    "namespace": "Joomla\\Component\\Stations",
+    "singular": "destination",
+    "plural": "destinations",
+    "views": {
+      "back": [
+        "destination",
+        "destinations"
+      ],
+      "front": [
+        "destination",
+        "destinations"
+      ]
+    }
+  }
+}

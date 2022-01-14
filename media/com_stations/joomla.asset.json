@@ -1,0 +1,19 @@
+{
+	"$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+	"name": "com_stations",
+	"version": "3.0",
+	"description": "Liste der Freien Radios in der BRD",
+	"license": "GNU",
+	"assets": [
+		{
+			"name": "com_stations.styles",
+			"type": "style",
+			"uri": "com_stations/styles.css"
+		},
+		{
+			"name": "com_stations.destinations",
+			"type": "style",
+			"uri": "com_stations/stations.css"
+		}
+	]
+}

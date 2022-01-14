@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset label="Basic"
+			  addruleprefix="Joomla\Component\Stations\Administrator\Rule"
+			  addfieldprefix="Joomla\Component\Stations\Administrator\Field"
+	>
+
+		<field
+				name="id"
+				type="number"
+				label="JGLOBAL_FIELD_ID_LABEL"
+				default="0"
+				class="readonly"
+				readonly="true"
+		/>
+
+		<field
+				id="name"
+				name="name"
+				type="text"
+				required="true"
+				label="Name"
+				description="Name des Senders"
+				class="inputbox"
+				size="40"/>
+
+<field
+			name="catid"
+			type="categoryedit"
+			label="JCATEGORY"
+			extension="com_stations"
+			addfieldprefix="Joomla\Component\Categories\Administrator\Field"
+			required="true"
+			default=""
+		/>
+
+		<field
+				id="published"
+				name="published"
+				type="list"
+				class="inputbox"
+				default="1"
+				size="1"
+				label="JGLOBAL_FIELDSET_PUBLISHING"
+				description="JFIELD_PUBLISHED_DESC">
+			<option
+					value="1">
+				JPublished</option>
+			<option
+					value="0">
+				JUnPublished</option>
+			<option
+					value="-1">
+				JArchived</option>
+			<option
+					value="-2">
+				JTrashed</option>
+		</field>
+
+		<field
+				name="ordering"
+				type="hidden"
+				filter="unset"/>
+
+		<field
+				id="address"
+				name="address"
+				type="text"
+				required="false"
+				label="Address"
+				description="Adresse"
+				class="inputbox"
+				size="40"/>
+
+
+		<field
+				id="zipcode"
+				name="zipcode"
+				type="text"
+				required="false"
+				label="Zipcode"
+				description="Postleitzahl"
+				class="inputbox"
+				size="40"/>
+
+
+		<field
+				id="town"
+				name="town"
+				type="text"
+				required="false"
+				label="Town"
+				description="Ort/Stadt"
+				class="inputbox"
+				size="40"/>
+
+
+		<field
+				id="www"
+				name="www"
+				type="text"
+				required="false"
+				label="Webseite"
+				description="Webseite"
+				class="inputbox"
+				size="40"/>
+
+
+		<field
+				id="livestream"
+				name="livestream"
+				type="text"
+				required="false"
+				label="Livestream"
+				description="Adresse des Livestreams"
+				class="inputbox"
+				size="40"/>
+
+
+		<field
+				id="frn_id"
+				name="frn_id"
+				type="text"
+				required="false"
+				label="FRN ID"
+				description="Nicht verwenden"
+				class="inputbox"
+				size="5"/>
+
+		<field
+				id="mhz"
+				name="mhz"
+				type="text"
+				required="false"
+				label="Frequenz"
+				description="Sendefrequenz"
+				class="inputbox"
+				size="10"/>
+		<field
+				id="lat"
+				name="lat"
+				type="text"
+				required="false"
+				label="Breitengrad"
+				description="Breitengrad"
+				class="inputbox"
+				size="40"/>
+
+
+		<field
+				id="long"
+				name="long"
+				type="text"
+				required="false"
+				label="Längengrad"
+				description="Längengrad"
+				class="inputbox"
+				size="40"/>
+
+
+
+		<field
+				id="txt"
+				name="txt"
+				type="editor"
+				label="Beschreibung"
+				description="Hinweise oder Beschreibung"
+				class="inputbox"
+				buttons="readmore,pagebreak"/>
+
+		<field
+				id="picture"
+				name="picture"
+				type="text"
+				required="false"
+				label="Picture"
+				description="picture_Desc"
+				class="inputbox"
+				size="40"/>
+
+
+		<field
+				id="assign_routeplanning"
+				name="assign_routeplanning"
+				type="text"
+				required="false"
+				label="Assign_routeplanning"
+				description="assign_routeplanning_Desc"
+				class="inputbox"
+				size="40"/>
+
+
+		<field
+				id="user"
+				name="user"
+				type="text"
+				required="false"
+				label="User"
+				description="user_Desc"
+				class="inputbox"
+				size="40"/>
+
+
+		<field
+				id="country"
+				name="country"
+				type="text"
+				required="false"
+				label="Country"
+				description="Land"
+				class="inputbox"
+				size="40"/>
+
+	</fieldset>
+</form>
