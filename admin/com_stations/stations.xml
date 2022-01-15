@@ -7,16 +7,11 @@
     <license>GNU</license>
     <authorEmail>michael-liebler@janguo.de</authorEmail>
     <authorUrl>https://freie-radios.de</authorUrl>
-    <version>3.1</version>
+    <version>3.2</version>
     <description>COM_STATIONS_XML_DESCRIPTION</description>
     <namespace path="src">Joomla\Component\Stations</namespace>
 
-    <!-- Runs on install -->
-    <install>
-        <sql>
-            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
-        </sql>
-    </install>
+
 
     <files folder="site/com_stations">
         <folder>helpers</folder>
@@ -29,10 +24,6 @@
         <language tag="en-GB">language/en-GB/com_stations.ini</language>
     </languages>
 
-    <media destination="com_stations" folder="media">
-        <folder>js</folder>
-    </media>
-
     <administration>
         <menu>COM_STATIONS</menu>
         <submenu>
@@ -43,9 +34,9 @@
             <menu link="option=com_stations"
                   view="destinations" img="class:basket" alt="STATIONS/Destinations">Radiosender</menu>
             <menu link="option=com_categories&amp;extension=com_stations">
-                JCATEGORY
+                Regionen
                 <params>
-                    <menu-quicktask-title>JCATEGORY</menu-quicktask-title>
+                    <menu-quicktask-title>Regionen</menu-quicktask-title>
                     <menu-quicktask>index.php?option=com_categories&amp;view=category&amp;layout=edit&amp;extension=com_stations</menu-quicktask>
                 </params>
             </menu>
