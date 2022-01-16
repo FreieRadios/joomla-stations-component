@@ -62,24 +62,32 @@ class JsonView extends CategoryView
         $data = [];
         foreach ($this->items as $item) {
             $item->www = (!preg_match("~^(?:f|ht)tps?://~i", $item->www)) ?  'https://' . $item->www : $item->www;
-            $jsonItem = [
-                'name' => $item->name,
-                'address'  => $item->address,
-                'zipcode'  => $item->zipcode,
-                'city' => $item->town,
-                'www' => $item->www,
-                'livestream' => $item->livestream,
-                'mhz' => $item->mhz,
-                'longitude' => $item->long,
-                'latitude' => $item->lat,
+            $feature = array(
+                'id' => $item->id,
+                'type' => 'Feature',
+                'geometry' => array(
+                    'type' => 'Point',
+                    # Pass Longitude and Latitude Columns here
+                    'coordinates' => [$item->long, $item->lat]
+                ),
+                # Pass other attribute columns here
+                'properties' => array(
+                    'name' => $item->name,
+                    'address'  => $item->address,
+                    'zipcode'  => $item->zipcode,
+                    'city' => $item->town,
+                    'www' => $item->www,
+                    'livestream' => $item->livestream,
+                    'mhz' => $item->mhz,
+                )
+            );
 
-            ];
             
-            $data[] = $jsonItem;
+            $data[] = $feature;
 
         }
         header('Content-Type: application/json');
-        echo new JsonResponse($data);
+        echo  json_encode($data, JSON_NUMERIC_CHECK);
         exit;
 
 
