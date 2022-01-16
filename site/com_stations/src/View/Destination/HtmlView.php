@@ -82,14 +82,12 @@ class HtmlView extends BaseHtmlView
 
 		$state = $this->get('State');
 		$item  = $this->get('Item');
-		$model = $this->getModel();
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
 		{
 			throw new GenericDataException(implode("\n", $errors), 500);
 		}
-
 		$params = $state->get('params');
 
 		// Escape strings for HTML output

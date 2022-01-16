@@ -39,11 +39,17 @@ $start = true;
                         <li class="row cat-list-row" >
 
                             <div class="list-title">
-                                <?php echo $item->name; ?>
+                                <h4><?php echo $item->name; ?></h4>
 
                             </div>
-
+                            <div class="list-item">
+                            <?php echo $item->address; ?><br />
+                            <?php echo $item->zipcode; ?> <?php echo $item->town; ?><br />
+                            <a class="stations-url" href="<?php echo $item->url; ?>"><?php echo $item->www; ?></a><br />
+                            <?php echo $item->mhz ?>
+                             <br /><br />
                             <?php echo $item->event->afterDisplayContent; ?>
+                            </div>
                         </li>
                 <?php $category = $item->category_title; ?>
                 <?php endforeach; ?>

@@ -39,6 +39,12 @@ class DestinationsModel extends ListModel
 			$config['filter_fields'] = array(
 				'id', 'a.id',
 				'title', 'a.title',
+                'a.address','address',
+                'a.zipcode','zipcode',
+                'a.town','town',
+                'a.www','www',
+                'a.livestream','livestream',
+                'a.mhz','mhz',
                 'catid', 'a.catid', 'category_id', 'category_title',
 				'alias', 'a.alias',
 				'checked_out', 'a.checked_out',
@@ -156,7 +162,7 @@ class DestinationsModel extends ListModel
 					', ',
 					$this->getState(
 						'list.select',
-						'a.id, a.name, a.alias, a.txt'
+						'a.id, a.name, a.alias, a.txt, a.address, a.zipcode, a.town, a.www, a.livestream, a.mhz, a.long, a.lat'
 					)
 				)
 			)

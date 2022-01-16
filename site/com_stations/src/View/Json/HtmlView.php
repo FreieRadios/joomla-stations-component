@@ -7,7 +7,7 @@
  * @copyright   Copyright (C) 2005 - 2022 Open Source Matters, Inc. All rights reserved.
  */
 
-namespace Joomla\Component\Stations\Site\View\Category;
+namespace Joomla\Component\Stations\Site\View\Json;
 
 \defined('_JEXEC') or die;
 
