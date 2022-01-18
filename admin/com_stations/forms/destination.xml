@@ -67,7 +67,7 @@
 				name="address"
 				type="text"
 				required="false"
-				label="Address"
+				label="COM_STATIONS_ADDRESS"
 				description="Adresse"
 				class="inputbox"
 				size="40"/>
@@ -78,7 +78,7 @@
 				name="zipcode"
 				type="text"
 				required="false"
-				label="Zipcode"
+				label="COM_STATIONS_ZIPCODE"
 				description="Postleitzahl"
 				class="inputbox"
 				size="40"/>
@@ -89,7 +89,7 @@
 				name="town"
 				type="text"
 				required="false"
-				label="Town"
+				label="COM_STATIONS_CITY="
 				description="Ort/Stadt"
 				class="inputbox"
 				size="40"/>
