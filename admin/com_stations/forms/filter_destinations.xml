@@ -27,7 +27,7 @@
 				multiple="true"
 				extension="com_stations"
 				layout="joomla.form.field.list-fancy-select"
-				hint="JOPTION_SELECT_CATEGORY"
+				hint="COM_STATIONS_SELECT_REGION"
 				onchange="this.form.submit();"
 				published="0,1,2"
 		/>
