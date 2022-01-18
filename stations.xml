@@ -58,6 +58,8 @@
         <languages folder="admin">
             <language tag="en-GB">language/en-GB/com_stations.ini</language>
             <language tag="en-GB">language/en-GB/com_stations.sys.ini</language>
+            <language tag="de-DE">language/de-DE/com_stations.ini</language>
+            <language tag="de-DE">language/de-DE/com_stations.sys.ini</language>
         </languages>
     </administration>
     <dashboards>
