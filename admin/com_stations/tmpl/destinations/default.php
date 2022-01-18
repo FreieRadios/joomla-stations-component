@@ -137,7 +137,7 @@ if ($saveOrder && !empty($this->items))
 												<?php echo $this->escape($item->name); ?>
 											<?php endif; ?>
                                             <div class="small">
-                                                <?php echo Text::_('JCATEGORY') . ': ' . $this->escape($item->category_title); ?>
+                                                <?php echo Text::_('COM_STATIONS_REGION') . ': ' . $this->escape($item->category_title); ?>
                                             </div>
 										</div>
 									</th>
