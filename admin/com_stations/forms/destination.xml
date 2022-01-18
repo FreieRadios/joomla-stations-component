@@ -101,7 +101,7 @@
 				type="text"
 				required="false"
 				label="Webseite"
-				description="Webseite"
+				description="Webseite (mit Protokoll: https://aaa.bbb.tld)"
 				class="inputbox"
 				size="40"/>
 
@@ -112,7 +112,7 @@
 				type="text"
 				required="false"
 				label="Livestream"
-				description="Adresse des Livestreams"
+				description="Adresse des Livestreams  (mit Protokoll: https://aaa.bbb.tld)"
 				class="inputbox"
 				size="40"/>
 
