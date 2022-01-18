@@ -162,6 +162,8 @@ class DestinationsModel extends ListModel
 				$db->quoteName('#__languages', 'l') . ' ON ' . $db->quoteName('l.lang_code') . ' = ' . $db->quoteName('a.language')
 			);
 
+        $query->select($db->quoteName('c.title', 'category_title'));
+
         $query->join('LEFT', $db->quoteName('#__categories', 'c'), $db->quoteName('c.id') . ' = ' . $db->quoteName('a.catid'))
             ->join('LEFT', $db->quoteName('#__categories', 'parent'), $db->quoteName('parent.id') . ' = ' . $db->quoteName('c.parent_id'));
 
@@ -276,12 +278,18 @@ class DestinationsModel extends ListModel
 		$orderCol = $this->state->get('list.ordering', 'a.name');
 		$orderDirn = $this->state->get('list.direction', 'asc');
 
-		if ($orderCol === 'a.ordering')
+		if ($orderCol === 'a.ordering' || $orderCol === 'category_title')
 		{
-			$orderCol = $db->quoteName('a.ordering');
-		}
+            $ordering = [
+                $db->quoteName('c.title') . ' ' . $db->escape($orderDirn),
+                $db->quoteName('a.ordering') . ' ' . $db->escape($orderDirn),
+            ];
 
-		$query->order($db->escape($orderCol . ' ' . $orderDirn));
+		} else {
+            $ordering = $db->escape($orderCol) . ' ' . $db->escape($orderDirn);
+        }
+
+		$query->order($ordering);
 		return $query;
 	}
 }

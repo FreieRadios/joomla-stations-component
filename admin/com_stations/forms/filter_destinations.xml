@@ -31,25 +31,7 @@
 				onchange="this.form.submit();"
 				published="0,1,2"
 		/>
-		<field
-			name="access"
-			type="accesslevel"
-			label="JGRID_HEADING_ACCESS"
-			multiple="true"
-			layout="joomla.form.field.list-fancy-select"
-			hint="JOPTION_SELECT_ACCESS"
-			onchange="this.form.submit();"
-		/>
 
-		<field
-			name="language"
-			type="contentlanguage"
-			label="JGRID_HEADING_LANGUAGE"
-			onchange="this.form.submit();"
-			>
-			<option value="">JOPTION_SELECT_LANGUAGE</option>
-			<option value="*">JALL</option>
-		</field>
 
 	</fields>
 
@@ -71,12 +53,6 @@
 			<option value="a.name DESC">Name absteigend</option>
 			<option value="category_title ASC">JCATEGORY_ASC</option>
 			<option value="category_title DESC">JCATEGORY_DESC</option>
-			<option value="a.access ASC">JGRID_HEADING_ACCESS_ASC</option>
-			<option value="a.access DESC">JGRID_HEADING_ACCESS_DESC</option>
-			<option value="a.created_by ASC">JAUTHOR_ASC</option>
-			<option value="a.created_by DESC">JAUTHOR_DESC</option>
-			<option value="language ASC" requires="multilanguage">JGRID_HEADING_LANGUAGE_ASC</option>
-			<option value="language DESC" requires="multilanguage">JGRID_HEADING_LANGUAGE_DESC</option>
 			<option value="a.created ASC">JDATE_ASC</option>
 			<option value="a.created DESC">JDATE_DESC</option>
 			<option value="a.id ASC">JGRID_HEADING_ID_ASC</option>
@@ -87,7 +63,7 @@
 			name="limit"
 			type="limitbox"
 			label="JGLOBAL_LIST_LIMIT"
-			default="25"
+			default="100"
 			onchange="this.form.submit();"
 		/>
 	</fields>
