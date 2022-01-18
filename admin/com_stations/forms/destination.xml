@@ -89,7 +89,7 @@
 				name="town"
 				type="text"
 				required="false"
-				label="COM_STATIONS_CITY="
+				label="COM_STATIONS_CITY"
 				description="Ort/Stadt"
 				class="inputbox"
 				size="40"/>
@@ -133,7 +133,7 @@
 				type="text"
 				required="false"
 				label="Frequenz"
-				description="Sendefrequenz"
+				description="Sendefrequenz (ohne MHz)"
 				class="inputbox"
 				size="10"/>
 		<field
@@ -142,7 +142,7 @@
 				type="text"
 				required="false"
 				label="Breitengrad"
-				description="Breitengrad"
+				description="Breitengrad (Dezimal - xx.xxxxxx)"
 				class="inputbox"
 				size="40"/>
 
@@ -153,7 +153,7 @@
 				type="text"
 				required="false"
 				label="Längengrad"
-				description="Längengrad"
+				description="Längengrad (Dezimal - xx.xxxxxx)"
 				class="inputbox"
 				size="40"/>
 
