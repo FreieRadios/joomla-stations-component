@@ -12,7 +12,8 @@ namespace Joomla\Component\Stations\Administrator\Model;
 use Joomla\CMS\Factory;
 use Joomla\CMS\MVC\Model\ListModel;
 use Joomla\Database\ParameterType;
-
+use Joomla\Utilities\ArrayHelper;
+use Joomla\CMS\Table\Table;
 \defined('_JEXEC') or die('Restricted Direct Access!');
 
 /**
@@ -48,7 +49,9 @@ class DestinationsModel extends ListModel
 				'created', 'a.created',
 				'created_by', 'a.created_by',
 				'ordering', 'a.ordering',
-				'language', 'a.language', 'language_title'
+				'language', 'a.language', 'language_title',
+                'catid', 'a.catid', 'category_title',
+                'category_id',
 			);
 		}
 
@@ -115,6 +118,7 @@ class DestinationsModel extends ListModel
 		$id .= ':' . $this->getState('filter.published');
 		$id .= ':' . $this->getState('filter.access');
 		$id .= ':' . $this->getState('filter.language');
+        $id .= ':' . $this->getState('filter.category_id');
 		$id .= ':' . serialize($this->getState('filter.tag'));
 		$id .= ':' . $this->getState('filter.level');
 
@@ -142,7 +146,7 @@ class DestinationsModel extends ListModel
 					', ',
 					$this->getState(
 						'list.select',
-						'a.id, a.name, a.zipcode, town, a.alias, a.published, a.access, a.created, a.created_by, a.ordering, a.language, ' .
+						'a.id, a.name, a.zipcode, town, a.alias, a.published, a.access, a.created, a.created_by, a.ordering, a.language, a.catid, ' .
 						'a.checked_out, a.checked_out_time'
 					)
 				)
@@ -157,6 +161,9 @@ class DestinationsModel extends ListModel
 				'LEFT',
 				$db->quoteName('#__languages', 'l') . ' ON ' . $db->quoteName('l.lang_code') . ' = ' . $db->quoteName('a.language')
 			);
+
+        $query->join('LEFT', $db->quoteName('#__categories', 'c'), $db->quoteName('c.id') . ' = ' . $db->quoteName('a.catid'))
+            ->join('LEFT', $db->quoteName('#__categories', 'parent'), $db->quoteName('parent.id') . ' = ' . $db->quoteName('c.parent_id'));
 
 		// Join over the users for the checked out user.
 		$query->select($db->quoteName('uc.name', 'editor'))
@@ -233,7 +240,39 @@ class DestinationsModel extends ListModel
 			$query->bind(':language', $language);
 		}
 
-		// Add the list ordering clause.
+        $categoryId = $this->getState('filter.category_id', array());
+        if (!is_array($categoryId))
+        {
+            $categoryId = $categoryId ? array($categoryId) : array();
+        }
+        // Case: Using both categories filter and by level filter
+        if (count($categoryId))
+        {
+            $categoryId = ArrayHelper::toInteger($categoryId);
+            $categoryTable = Table::getInstance('Category', 'JTable');
+            $subCatItemsWhere = array();
+
+            foreach ($categoryId as $key => $filter_catid)
+            {
+                $categoryTable->load($filter_catid);
+
+                // Because values to $query->bind() are passed by reference, using $query->bindArray() here instead to prevent overwriting.
+                $valuesToBind = [$categoryTable->lft, $categoryTable->rgt];
+
+                // Bind values and get parameter names.
+                $bounded = $query->bindArray($valuesToBind);
+
+                $categoryWhere = $db->quoteName('c.lft') . ' >= ' . $bounded[0] . ' AND ' . $db->quoteName('c.rgt') . ' <= ' . $bounded[1];
+
+
+                $subCatItemsWhere[] = '(' . $categoryWhere . ')';
+            }
+
+            $query->where('(' . implode(' OR ', $subCatItemsWhere) . ')');
+        }
+
+
+        // Add the list ordering clause.
 		$orderCol = $this->state->get('list.ordering', 'a.name');
 		$orderDirn = $this->state->get('list.direction', 'asc');
 
