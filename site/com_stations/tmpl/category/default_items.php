@@ -23,7 +23,7 @@ $start = true;
     <form action="<?php echo htmlspecialchars(Uri::getInstance()->toString()); ?>" method="post" name="adminForm" id="adminForm">
         <?php if (empty($this->items)) : ?>
             <p>
-                SOSO<?php echo Text::_('JGLOBAL_SELECT_NO_RESULTS_MATCH'); ?>
+                <?php echo Text::_('JGLOBAL_SELECT_NO_RESULTS_MATCH'); ?>
             </p>
         <?php else : ?>
 
@@ -46,7 +46,7 @@ $start = true;
                             <?php echo $item->address; ?><br />
                             <?php echo $item->zipcode; ?> <?php echo $item->town; ?><br />
                             <a class="stations-url" href="<?php echo $item->url; ?>"><?php echo $item->www; ?></a><br />
-                            <?php echo $item->mhz ?>
+                            <?php echo $item->mhz ?> MHz
                              <br /><br />
                             <?php echo $item->event->afterDisplayContent; ?>
                             </div>
