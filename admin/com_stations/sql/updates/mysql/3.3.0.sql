@@ -1,1 +1,1 @@
-ALTER TABLE `#__stations_destinations` ADD COLUMN  `logo` varchar(100) NOT NULL DEFAULT '',;
+ALTER TABLE `#__stations_destinations` ADD COLUMN  `logo` varchar(100) NOT NULL DEFAULT '';
