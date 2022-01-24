@@ -68,11 +68,12 @@ class JsonView extends CategoryView
                 # Pass other attribute columns here
                 'properties' => (object) array(
                     'name' => $item->name,
-                    'PLZ_Ort' => $item->zipcode . " " . $item->town,
-                    'Adresse' => $item->address,
-                    'Web' => $item->www,
-                    'UKW' => $item->mhz . " MHz",
-                    'url' => $item->logo,
+                    'zipcode' => $item->zipcode,
+                    'city' => $item->town,
+                    'address' => $item->address,
+                    'www' => $item->www,
+                    'ukw' => $item->mhz . " MHz",
+                    'logo' => $item->logo,
                     'livestream' => $item->livestream,
                 ),
                 'geometry' => (object) array(
