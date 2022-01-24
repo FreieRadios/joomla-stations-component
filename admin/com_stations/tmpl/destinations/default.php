@@ -148,8 +148,8 @@ if ($saveOrder && !empty($this->items))
                                         <?php echo $item->zipcode; ?>
                                     </td>
 
-                                    <td class="small d-none d-md-table-cell">
-                                        <?php if ($item->logo): ?><img class="img-float" src="<?php echo $item->logo; ?>" /><?php else: ?>---<?php endif; ?>
+                                    <td class="small d-none d-md-table-cell" width="10%">
+                                        <?php if ($item->logo): ?><img class="img-fluid" src="<?php echo $item->logo; ?>" /><?php else: ?>---<?php endif; ?>
                                     </td>
                                     <td class="small d-none d-md-table-cell">
                                         <?php echo $item->town; ?>
