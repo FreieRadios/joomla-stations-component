@@ -59,34 +59,37 @@ class JsonView extends CategoryView
         parent::commonCategoryDisplay();
 
         $this->pagination->hideEmptyLimitstart = true;
-        $data = [];
+        $items = [];
         foreach ($this->items as $item) {
             $item->www = (!preg_match("~^(?:f|ht)tps?://~i", $item->www)) ?  'https://' . $item->www : $item->www;
             $feature = array(
                 'id' => $item->id,
                 'type' => 'Feature',
+                # Pass other attribute columns here
+                'properties' => array(
+                    'name' => $item->name,
+                    'PLZ_Ort' => $item->zipcode . " " .$item->town,
+                    'Adresse'  => $item->address,
+                    'Web' => $item->www,
+                    'UKW' => $item->mhz . " MHz",
+                    'url'  => $item->logo,
+                    'livestream'  => $item->livestream,
+                ),
                 'geometry' => array(
                     'type' => 'Point',
                     # Pass Longitude and Latitude Columns here
                     'coordinates' => [$item->long, $item->lat]
                 ),
-                # Pass other attribute columns here
-                'properties' => array(
-                    'name' => $item->name,
-                    'address'  => $item->address,
-                    'zipcode'  => $item->zipcode,
-                    'logo'  => $item->zipcode,
-                    'city' => $item->town,
-                    'www' => $item->www,
-                    'livestream' => $item->livestream,
-                    'mhz' => $item->mhz,
-                )
+
             );
 
-            
-            $data[] = $feature;
+
+            $items[] = $feature;
 
         }
+        $data = \stdClass::class;
+        $data->type = 'FeatureCollection';
+        $data->feature = $items;
         header('Content-Type: application/json');
         echo  json_encode($data, JSON_NUMERIC_CHECK);
         exit;
