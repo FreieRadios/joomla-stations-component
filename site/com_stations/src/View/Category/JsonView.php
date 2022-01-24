@@ -102,9 +102,9 @@ class JsonView extends CategoryView
                 )
         ];
         $items[] = $polygon;
-        // $data = (object)['type' => 'FeatureCollection', 'features' => $items];
+        $data = (object)['type' => 'FeatureCollection', 'features' => $items];
         header('Content-Type: application/json');
-        echo json_encode($items, JSON_NUMERIC_CHECK);
+        echo json_encode($data, JSON_NUMERIC_CHECK);
         exit;
 
 
