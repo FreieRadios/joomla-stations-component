@@ -109,7 +109,7 @@ if ($saveOrder && !empty($this->items))
 								<?php $canChange  = $user->authorise('core.edit.state', $component . '.destination.' . $item->id) && $canCheckin; ?>
 								<tr class="row<?php echo $i % 2; ?>" data-draggable-group="1" item-id="<?php echo $item->id; ?>">
 									<td class="text-center">
-										<?php echo HTMLHelper::_('grid.id', $i, $item->id, false, 'cid', 'cb', $item->title); ?>
+										<?php echo HTMLHelper::_('grid.id', $i, $item->id, false, 'cid', 'cb', $item->name); ?>
 									</td>
 									<td class="text-center d-none d-md-table-cell">
 										<?php $iconClass = ''; ?>
@@ -134,7 +134,7 @@ if ($saveOrder && !empty($this->items))
 												<?php echo HTMLHelper::_('jgrid.checkedout', $i, $item->editor, $item->checked_out_time, 'destinations.', $canCheckin); ?>
 											<?php endif; ?>
 											<?php if ($canEdit || $canEditOwn) : ?>
-												<a href="<?php echo Route::_('index.php?option=com_stations&task=destination.edit&id=' . $item->id, false); ?>" title="<?php echo Text::_('JACTION_EDIT'); ?> <?php echo $this->escape($item->title); ?>">
+												<a href="<?php echo Route::_('index.php?option=com_stations&task=destination.edit&id=' . $item->id, false); ?>" title="<?php echo Text::_('JACTION_EDIT'); ?> <?php echo $this->escape($item->name); ?>">
 													<?php echo $this->escape($item->name); ?></a>
 											<?php else : ?>
 												<?php echo $this->escape($item->name); ?>
