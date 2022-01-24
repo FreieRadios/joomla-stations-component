@@ -87,9 +87,7 @@ class JsonView extends CategoryView
             $items[] = $feature;
 
         }
-        $data = \stdClass::class;
-        $data->type = 'FeatureCollection';
-        $data->feature = $items;
+        $data = (object) ['type' => 'FeatureCollection', 'feature' => $items];
         header('Content-Type: application/json');
         echo  json_encode($data, JSON_NUMERIC_CHECK);
         exit;
