@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `#__stations_destinations`
 ) NOT NULL,
     `mhz` varchar
 (
-    30
+    30ALTER TABLE `#__foos_details` ADD COLUMN  `access` int(10) unsigned NOT NULL DEFAULT 0 AFTER `alias`;
 ) NOT NULL,
     `lat` varchar
 (
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `#__stations_destinations`
     `published` tinyint
 (
     1
-) NOT NULL DEFAULT 0,
+) NOT NULL DEFAULT 0,ALTER TABLE `#__foos_details` ADD COLUMN  `access` int(10) unsigned NOT NULL DEFAULT 0 AFTER `alias`;
     `checked_out` int unsigned NOT NULL DEFAULT 0,
     `checked_out_time` datetime,
     `txt` text NOT NULL,
