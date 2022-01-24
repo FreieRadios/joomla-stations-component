@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `#__stations_destinations`
 ) NOT NULL,
     `mhz` varchar
 (
-    30ALTER TABLE `#__foos_details` ADD COLUMN  `access` int(10) unsigned NOT NULL DEFAULT 0 AFTER `alias`;
+    30
 ) NOT NULL,
     `lat` varchar
 (
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `#__stations_destinations`
     `checked_out_time` datetime,
     `txt` text NOT NULL,
     `picture` varchar
-(
+(ALTER TABLE `#__foos_details` ADD COLUMN  `access` int(10) unsigned NOT NULL DEFAULT 0 AFTER `alias`;
     255
 ) NOT NULL DEFAULT '',
     `assign_routeplanning` tinyint
