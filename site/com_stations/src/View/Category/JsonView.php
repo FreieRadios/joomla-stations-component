@@ -75,6 +75,7 @@ class JsonView extends CategoryView
                     'name' => $item->name,
                     'address'  => $item->address,
                     'zipcode'  => $item->zipcode,
+                    'logo'  => $item->zipcode,
                     'city' => $item->town,
                     'www' => $item->www,
                     'livestream' => $item->livestream,

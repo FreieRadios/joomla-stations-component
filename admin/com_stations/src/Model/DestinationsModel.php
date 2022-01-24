@@ -40,6 +40,7 @@ class DestinationsModel extends ListModel
 				'id', 'a.id',
 				'name', 'a.name',
                 'zipcode', 'a.zipcode',
+                'logo', 'a.logo',
                 'town', 'a.town',
 				'alias', 'a.alias',
 				'checked_out', 'a.checked_out',
@@ -146,7 +147,7 @@ class DestinationsModel extends ListModel
 					', ',
 					$this->getState(
 						'list.select',
-						'a.id, a.name, a.zipcode, town, a.alias, a.published, a.access, a.created, a.created_by, a.ordering, a.language, a.catid, ' .
+						'a.id, a.name, a.zipcode, town, a.alias, a.logo, a.published, a.access, a.created, a.created_by, a.ordering, a.language, a.catid, ' .
 						'a.checked_out, a.checked_out_time'
 					)
 				)

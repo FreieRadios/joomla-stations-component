@@ -46,7 +46,8 @@ $start = true;
                             <?php echo $item->address; ?><br />
                             <?php echo $item->zipcode; ?> <?php echo $item->town; ?><br />
                             <a class="stations-url" href="<?php echo $item->url; ?>"><?php echo $item->www; ?></a><br />
-                            <?php echo $item->mhz ?> MHz
+                            <?php echo $item->mhz ?> MHz<br />
+                             <?php if ($item->logo): ?><img class="img-float" src="<?php echo $item->logo; ?>" /><?php else: ?>---<?php endif; ?>
                              <br /><br />
                             <?php echo $item->event->afterDisplayContent; ?>
                             </div>

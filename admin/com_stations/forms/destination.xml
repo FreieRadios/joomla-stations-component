@@ -169,12 +169,12 @@
 				buttons="readmore,pagebreak"/>
 
 		<field
-				id="picture"
-				name="picture"
+				id="logo"
+				name="logo"
 				type="text"
 				required="false"
-				label="Picture"
-				description="picture_Desc"
+				label="COM_STATIONS_LOGO"
+				description="COM_STATIONS_LOGO_DESC"
 				class="inputbox"
 				size="40"/>
 

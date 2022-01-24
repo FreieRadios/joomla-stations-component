@@ -76,6 +76,9 @@ if ($saveOrder && !empty($this->items))
                                     <?php echo HTMLHelper::_('searchtools.sort', 'PLZ', 'a.zipcode', $listDirn, $listOrder); ?>
                                 </th>
                                 <th scope="col">
+                                    <?php echo Text::_('COM_STATIONS_LOGO'); ?>
+                                </th>
+                                <th scope="col">
                                     <?php echo HTMLHelper::_('searchtools.sort', 'Stadt/Ort', 'a.town', $listDirn, $listOrder); ?>
                                 </th>
 								<th scope="col" class="w-10 d-none d-md-table-cell">
@@ -143,6 +146,10 @@ if ($saveOrder && !empty($this->items))
 									</th>
                                     <td class="small d-none d-md-table-cell">
                                         <?php echo $item->zipcode; ?>
+                                    </td>
+
+                                    <td class="small d-none d-md-table-cell">
+                                        <?php if ($item->logo): ?><img class="img-float" src="<?php echo $item->logo; ?>" /><?php else: ?>---<?php endif; ?>
                                     </td>
                                     <td class="small d-none d-md-table-cell">
                                         <?php echo $item->town; ?>
