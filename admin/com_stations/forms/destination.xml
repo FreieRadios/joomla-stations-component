@@ -128,12 +128,12 @@
 				size="5"/>
 
 		<field
-				id="mhz"
-				name="mhz"
+				id="reception"
+				name="reception"
 				type="text"
 				required="false"
-				label="Frequenz"
-				description="Sendefrequenz (ohne MHz)"
+				label="Empfang"
+				description="Sendefrequenz(en) und/oder andere Empfangsmöglichkeiten"
 				class="inputbox"
 				size="10"/>
 		<field
