@@ -130,7 +130,7 @@
 		<field
 				id="reception"
 				name="reception"
-				type="text"
+				type="textarea"
 				required="false"
 				label="Empfang"
 				description="Sendefrequenz(en) und/oder andere Empfangsmöglichkeiten"
