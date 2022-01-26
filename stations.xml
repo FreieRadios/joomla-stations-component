@@ -57,7 +57,6 @@
         <files folder="admin/com_stations">
             <filename>access.xml</filename>
             <filename>config.xml</filename>
-            <filename>stations.xml</filename>
             <folder>forms</folder>
             <folder>helpers</folder>
             <folder>services</folder>
