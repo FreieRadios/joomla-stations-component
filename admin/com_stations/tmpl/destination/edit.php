@@ -64,7 +64,7 @@ $tmpl    = $isModal || $input->get('tmpl', '', 'cmd') === 'component' ? '&tmpl=c
 
                         <?php echo $this->form->renderField('frn_id'); ?>
 
-                        <?php echo $this->form->renderField('mhz'); ?>
+                        <?php echo $this->form->renderField('reception'); ?>
 
                         <?php echo $this->form->renderField('logo'); ?>
 

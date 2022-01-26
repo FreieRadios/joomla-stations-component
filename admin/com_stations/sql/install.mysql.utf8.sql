@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `#__stations_destinations` (
                                                           `livestream` varchar(100) NOT NULL DEFAULT '',
                                                           `catid` int(11) NOT NULL DEFAULT 0,
                                                           `frn_id` int(5) NOT NULL,
-                                                          `mhz` varchar(30) NOT NULL,
+                                                          `reception` text NOT NULL DEFAULT '',
                                                           `lat` varchar(200) NOT NULL,
                                                           `long` varchar(200) NOT NULL,
                                                           `published` tinyint(1) NOT NULL DEFAULT 0,

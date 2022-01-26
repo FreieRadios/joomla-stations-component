@@ -91,7 +91,7 @@ class DestinationModel extends ItemModel
 							', ',
 							$this->getState(
 								'list.select',
-								'a.id, a.name, a.address, a.zipcode, a.logo, a.town, a.www, a.livestream, a.mhz'
+								'a.id, a.name, a.address, a.zipcode, a.logo, a.town, a.www, a.livestream, a.reception'
 							)
 						)
 					)

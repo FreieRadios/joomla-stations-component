@@ -72,7 +72,7 @@ class JsonView extends CategoryView
                     'city' => $item->town,
                     'address' => $item->address,
                     'www' => $item->www,
-                    'ukw' => $item->mhz . " MHz",
+                    'ukw' => $item->reception ,
                     'logo' => $item->logo,
                     'livestream' => $item->livestream,
                 ),
