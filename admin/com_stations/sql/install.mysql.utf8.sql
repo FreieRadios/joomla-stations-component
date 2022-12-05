@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `#__stations_destinations` (
                                                           `lat` varchar(200) NOT NULL DEFAULT '',
                                                           `long` varchar(200) NOT NULL DEFAULT '',
                                                           `published` tinyint(1) NOT NULL DEFAULT 0,
-                                                          `checked_out` int(11) DEFAULT NULL DEFAULT 0,
+                                                          `checked_out` int(11) NOT NULL DEFAULT 0,
                                                           `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
                                                           `txt` text NOT NULL DEFAULT '',
                                                           `picture` varchar(255) NOT NULL DEFAULT '',

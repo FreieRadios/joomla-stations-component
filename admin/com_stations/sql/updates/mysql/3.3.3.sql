@@ -1,6 +1,6 @@
 ALTER TABLE `#__stations_destinations` CHANGE `frn_id` `frn_id` INT(5) NULL DEFAULT NULL,
 CHANGE `checked_out_time` `checked_out_time` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
-CHANGE `checked_out` `checked_out` DEFAULT NULL DEFAULT 0,
+CHANGE `checked_out` `checked_out` NOT NULL DEFAULT 0,
 CHANGE `name` `name` VARCHAR(100)  NOT NULL DEFAULT '',
 CHANGE `alias` `alias` VARCHAR(180)  NOT NULL DEFAULT '',
 CHANGE `address` `address` VARCHAR(200)  NOT NULL DEFAULT '',
