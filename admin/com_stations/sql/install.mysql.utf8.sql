@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `#__stations_destinations` (
                                                           `www` varchar(100) NOT NULL DEFAULT '',
                                                           `livestream` varchar(100) NOT NULL DEFAULT '',
                                                           `catid` int(11) NOT NULL DEFAULT 0,
-                                                          `frn_id` int(5) NULL DEFAULT NULL,
+                                                          `frn_id` int(5) NOT NULL DEFAULT 0,
                                                           `reception` text NOT NULL DEFAULT '',
                                                           `lat` varchar(200) NOT NULL DEFAULT '',
                                                           `long` varchar(200) NOT NULL DEFAULT '',

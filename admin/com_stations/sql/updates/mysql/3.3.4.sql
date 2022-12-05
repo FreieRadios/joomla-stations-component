@@ -1,0 +1,1 @@
+ALTER TABLE `#__stations_destinations` CHANGE `frn_id` `frn_id` INT(5) NOT NULL DEFAULT 0;
