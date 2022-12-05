@@ -1,0 +1,18 @@
+ALTER TABLE `#__stations_destinations` CHANGE `frn_id` `frn_id` INT(5) NULL DEFAULT NULL;
+ALTER TABLE `#__stations_destinations` CHANGE `checked_out_time` `checked_out_time` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00';
+ALTER TABLE `#__stations_destinations` CHANGE `checked_out` `checked_out` INT(11) NULL DEFAULT '0';
+ALTER TABLE `#__stations_destinations` CHANGE `name` `name` VARCHAR(100)  NOT NULL DEFAULT '';
+ALTER TABLE `#__stations_destinations` CHANGE `alias` `alias` VARCHAR(180)  NOT NULL DEFAULT '';
+ALTER TABLE `#__stations_destinations` CHANGE `address` `address` VARCHAR(200)  NOT NULL DEFAULT '';
+ALTER TABLE `#__stations_destinations` CHANGE `zipcode` `zipcode` VARCHAR(50)  NOT NULL DEFAULT '';
+ALTER TABLE `#__stations_destinations` CHANGE `town` `town` VARCHAR(250)  NOT NULL DEFAULT '';
+ALTER TABLE `#__stations_destinations` CHANGE `www` `www` VARCHAR(100)  NOT NULL DEFAULT '';
+ALTER TABLE `#__stations_destinations` CHANGE `livestream` `livestream` VARCHAR(100)  NOT NULL DEFAULT '';
+ALTER TABLE `#__stations_destinations` CHANGE `lat` `lat` VARCHAR(200)  NOT NULL DEFAULT '';
+ALTER TABLE `#__stations_destinations` CHANGE `long` `long` VARCHAR(200)  NOT NULL DEFAULT '';
+ALTER TABLE `#__stations_destinations` CHANGE `country` `country` INT(11) NOT NULL DEFAULT '33';
+ALTER TABLE `#__stations_destinations` CHANGE `access` `access` INT(11) NOT NULL DEFAULT '0';
+ALTER TABLE `#__stations_destinations` CHANGE `language` `language` VARCHAR(7)  NOT NULL DEFAULT '';
+ALTER TABLE `#__stations_destinations` CHANGE `created` `created` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00';
+ALTER TABLE `#__stations_destinations` CHANGE `modified` `modified` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00';
+ALTER TABLE `#__stations_destinations` CHANGE `modified_by` `modified_by` INT(11) NOT NULL DEFAULT '0';
