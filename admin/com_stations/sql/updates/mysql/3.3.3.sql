@@ -10,7 +10,6 @@ ALTER TABLE `#__stations_destinations` CHANGE `www` `www` VARCHAR(100)  NOT NULL
 ALTER TABLE `#__stations_destinations` CHANGE `livestream` `livestream` VARCHAR(100)  NOT NULL DEFAULT '';
 ALTER TABLE `#__stations_destinations` CHANGE `lat` `lat` VARCHAR(200)  NOT NULL DEFAULT '';
 ALTER TABLE `#__stations_destinations` CHANGE `long` `long` VARCHAR(200)  NOT NULL DEFAULT '';
-ALTER TABLE `#__stations_destinations` CHANGE `txt` `txt` TEXT  NOT NULL DEFAULT '';
 ALTER TABLE `#__stations_destinations` CHANGE `country` `country` INT(11) NOT NULL DEFAULT '33';
 ALTER TABLE `#__stations_destinations` CHANGE `access` `access` INT(11) NOT NULL DEFAULT '0';
 ALTER TABLE `#__stations_destinations` CHANGE `language` `language` VARCHAR(7)  NOT NULL DEFAULT '';

@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS `#__stations_destinations` (
                                                           `published` tinyint(1) NOT NULL DEFAULT 0,
                                                           `checked_out` int(11) NOT NULL DEFAULT 0,
                                                           `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-                                                          `txt` text NOT NULL DEFAULT '',
+                                                          `txt` text NOT NULL,
                                                           `picture` varchar(255) NOT NULL DEFAULT '',
                                                           `assign_routeplanning` tinyint(1) NOT NULL DEFAULT 1,
                                                           `ordering` int(11) NOT NULL DEFAULT 0,
